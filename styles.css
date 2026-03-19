@@ -824,3 +824,32 @@ ul {
     align-items: flex-start;
   }
 }
+
+@media (max-width: 768px) {
+  /* Make committee cards always visible and stacked for mobile */
+  .committee [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .committee-grid,
+  .group-1,
+  .group-2,
+  .group-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-card {
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .avatar-frame {
+    width: 82px;
+    height: 82px;
+    margin: 0;
+  }
+}
